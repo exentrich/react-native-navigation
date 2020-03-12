@@ -9,6 +9,8 @@ const KeyboardScreen = require('./KeyboardScreen');
 const Screens = require('./Screens');
 
 function registerScreens() {
+  Navigation.registerComponent('SplitViewDetail', () => require('./SplitViewDetail'));
+  Navigation.registerComponent('SplitViewMaster', () => require('./SplitViewMaster'));
   Navigation.registerComponent(Screens.Alert, () => require('./Alert'));
   Navigation.registerComponent(Screens.CocktailDetailsScreen, () => require('./sharedElementTransition/CocktailDetailsScreen'));
   Navigation.registerComponent(Screens.CocktailsListScreen, () => require('./sharedElementTransition/CocktailsList'));

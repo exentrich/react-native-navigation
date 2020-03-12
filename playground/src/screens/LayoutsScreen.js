@@ -30,6 +30,7 @@ class LayoutsScreen extends React.Component {
         <Button label='Stack' testID={STACK_BTN} onPress={this.stack} />
         <Button label='BottomTabs' testID={BOTTOM_TABS_BTN} onPress={this.bottomTabs} />
         <Button label='SideMenu' testID={SIDE_MENU_BTN} onPress={this.sideMenu} />
+        <Button label='SplitView' onPress={this.onClickSplitView} />
       </Root>
     );
   }
@@ -89,7 +90,7 @@ class LayoutsScreen extends React.Component {
               children: [
                 {
                   component: {
-                    name: 'navigation.playground.WelcomeScreen'
+                    name: 'SplitViewMaster'
                   },
                 },
               ]
@@ -101,17 +102,17 @@ class LayoutsScreen extends React.Component {
               children: [
                 {
                   component: {
-                    name: 'navigation.playground.WelcomeScreen'
+                    name: 'SplitViewDetail'
                   },
                 },
               ]
             }
           },
           options: {
-            displayMode: 'auto',
-            primaryEdge: 'leading',
-            minWidth: 150,
-            maxWidth: 300,
+            displayMode: 'visible',
+                        primaryEdge: 'leading',
+                        minWidth: 250,
+                        maxWidth: 400,
           },
         },
       },
